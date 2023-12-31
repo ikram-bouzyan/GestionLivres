@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Index</h1>
+<ul>
+    @foreach (Livre livre in ViewBag.Livreslist)
+    {
+        <li>ISBN:@livre.ISBN - Titre:@livre.Titre - Auteur:@livre.Auteur - Date:@livre.DateEdition - Resume:@livre.Resume</li>
+    }
+</ul>
+<a asp-controller="Livre" asp-action="Ajouter">Ajouter un Livre</a>
+<a asp-controller="Livre" asp-action="Modifier">Modifier un Livre</a>
+<a asp-controller="Livre" asp-action="Suprimer">Ajouter un Livre</a>
